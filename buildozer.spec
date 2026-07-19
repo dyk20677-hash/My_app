@@ -9,7 +9,12 @@ source.include_exts = py,png,jpg,kv,atlas,txt
 
 version = 1.0
 
-requirements = python3,kivy
+# تم إضافة المكتبات الخاصة بدعم اللغة العربية هنا
+requirements = python3,kivy,arabic_reshaper,python-bidi
+
+# تم إضافة مسارات الأيقونة وشاشة البداية هنا
+icon.filename = %(source.dir)s/icon.png
+presplash.filename = %(source.dir)s/presplash.png
 
 orientation = portrait
 
