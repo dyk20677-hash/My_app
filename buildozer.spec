@@ -22,7 +22,7 @@ fullscreen = 0
 
 android.api = 33
 android.minapi = 21
-android.ndk = 23b
+android.ndk = 25b
 
 # إضافة هذا السطر لحل مشكلة التراخيص
 android.accept_sdk_license = True
