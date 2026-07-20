@@ -28,6 +28,11 @@ jobs:
 
       - name: Build APK
         run: |
-          buildozer clean
+          cd My_app  # <-- مهم: غير My_app لاسم الفولدر اللي فيه ملف buildozer.spec
           buildozer -v android debug
-          
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-debug-apk
+          path: My_app/bin/*.apk  # <-- غير My_app لاسم الفولدر حقك
