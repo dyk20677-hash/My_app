@@ -1,6 +1,7 @@
 [app]
 
-title = حساب الحمايات
+# تم تغيير الاسم للإنجليزية لتجنب أخطاء الترميز
+title = Hisab Al Himayat
 package.name = hisabalhimayat
 package.domain = org.odey
 
@@ -9,10 +10,10 @@ source.include_exts = py,png,jpg,kv,atlas,txt
 
 version = 1.0
 
-# تم إضافة المكتبات الخاصة بدعم اللغة العربية هنا
+# المكتبات المطلوبة لدعم اللغة العربية والتشغيل
 requirements = python3,kivy,arabic_reshaper,python-bidi
 
-# تم إضافة مسارات الأيقونة وشاشة البداية هنا
+# مسارات الصور
 icon.filename = %(source.dir)s/icon.png
 presplash.filename = %(source.dir)s/presplash.png
 
@@ -22,7 +23,9 @@ fullscreen = 0
 
 android.api = 33
 android.minapi = 21
-android.ndk = 25b
+
+# تم التعديل إلى 23b لضمان الاستقرار أثناء عملية البناء
+android.ndk = 23b
 
 log_level = 2
 
