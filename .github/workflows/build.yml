@@ -9,10 +9,24 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
 
-      - name: Build APK with Buildozer
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies and Buildozer
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ccache git libffi-dev libssl-dev python3-dev zip unzip
+          pip install --upgrade pip setuptools
+          pip install buildozer cython
+
+      - name: Build APK
         run: |
           buildozer android debug
           
