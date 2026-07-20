@@ -10,7 +10,7 @@ source.include_exts = py,png,jpg,kv,atlas,txt
 
 version = 1.0
 
-# المكتبات المطلوبة لدعم اللغة العربية والتشغيل
+# المكتبات المطلوبة
 requirements = python3,kivy,arabic_reshaper,python-bidi
 
 # مسارات الصور
@@ -18,17 +18,16 @@ icon.filename = %(source.dir)s/icon.png
 presplash.filename = %(source.dir)s/presplash.png
 
 orientation = portrait
-
 fullscreen = 0
 
 android.api = 33
 android.minapi = 21
-
-# تم التعديل إلى 23b لضمان الاستقرار أثناء عملية البناء
 android.ndk = 23b
+
+# إضافة هذا السطر لحل مشكلة التراخيص
+android.accept_sdk_license = True
 
 log_level = 2
 
 [buildozer]
-
 warn_on_root = 1
